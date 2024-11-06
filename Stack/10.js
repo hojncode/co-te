@@ -40,7 +40,7 @@
  * @return {number}
 */
 function solution(s) {
-
+  let result;
   let tempArr = s.split('')
   let totalValidRotations = 0;
 

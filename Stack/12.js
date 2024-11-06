@@ -17,8 +17,8 @@ return prices.length - 계산 값
 
 function solution(prices) {
   const result = prices.map((price, index) => {
-    console.log("⚙️  file: 12.js:20  price", price)
-    console.log("-", prices.slice(index + 1));
+    // console.log("⚙️  file: 12.js:20  price", price)
+    // console.log("-", prices.slice(index + 1));
     return prices.slice(index + 1).filter(nextPrice => nextPrice >= price).length; // 이후 순번들 중 크거나 같은 값 개수 계산
   });
 
