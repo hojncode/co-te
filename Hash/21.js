@@ -32,14 +32,14 @@ function solution(want, number, discount) {
     return acc
   }, {})
 
-  // number 합
-  const numberAcc = number.reduce((acc, crr) => {
-    acc += crr
-    return acc
-  }, 0)
+  // // number 합
+  // const numberAcc = number.reduce((acc, crr) => {
+  //   acc += crr
+  //   return acc
+  // }, 0)
 
-  // 최대 시작일
-  const maximumStartDay = discount.length - numberAcc
+  // // 최대 시작일
+  // const maximumStartDay = discount.length - numberAcc
 
   // 
   for (let i = 0; i < discount.length; i++) {

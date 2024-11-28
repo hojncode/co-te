@@ -11,7 +11,7 @@ n개의 양의 정수로 이루어진 리스트 arr와 정수 target이 주어�
 // return True
 
 // 케이스 2
-const arr = [2,3,5,9]
+const arr = [2, 3, 5, 9]
 const target = 10
 // return False
 
@@ -41,7 +41,6 @@ const getHashTable = (arr, target) => {
 function solution(arr, target) {
   let result = "False";
 
-
   const hashTable = getHashTable(arr, target);
 
   for (let i = 0; i < arr.length; i++) {
@@ -61,6 +60,6 @@ function solution(arr, target) {
   return result;
 }
 
-solution(arr, target);
+// solution(arr, target);
 console.log("⚙️ variable solution(arr, target)", solution(arr, target));
 

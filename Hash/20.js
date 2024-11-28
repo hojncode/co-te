@@ -1,13 +1,13 @@
-const participant = ["leo", "kiki", "eden"];
-const completion = ["eden", "kiki"];
+// const participant = ["leo", "kiki", "eden"];
+// const completion = ["eden", "kiki"];
 //result = "leo";
 
 // const participant = ["marina", "josipa", "nikola", "vinko", "filipa"];
 // const completion = ["josipa", "filipa", "marina", "nikola"];
 //result = "vinko";
 
-// const participant = ["mislav", "stanko", "mislav", "ana"];
-// const completion = ["stanko", "ana", "mislav"];
+const participant = ["mislav", "stanko", "mislav", "ana"];
+const completion = ["stanko", "ana", "mislav"];
 //result = "mislav";
 
 function solution(participant, completion) {
@@ -16,7 +16,15 @@ function solution(participant, completion) {
 
   /*
     reduce : 배열의 각 요소를 객체에 누적시켜서 반환 (여기서는 밸류에 1을 추가 - 중복된 이름일 경우 +1 하기 위함)
+
+
+    {
+    "mislav" : 2,
+    stanko: 0,    
+    }
   */
+ 
+
   let obj = participant.reduce((accumulator, currentValue, index, array) => {
     accumulator[currentValue] = (accumulator[currentValue] || 0) + 1;
     return accumulator;
@@ -38,7 +46,8 @@ function solution(participant, completion) {
     result = Object.keys(
       Object.fromEntries(
         Object.entries(obj)
-          .filter(([key, value], index) => value !== 0))).flat().join("")
+          .filter(([key, value], index) => value !== 0)))
+      .flat().join("")
   }
 
   console.log("🚧  result", result);
