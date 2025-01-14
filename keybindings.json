@@ -1,0 +1,32 @@
+[
+    {
+        "key": "cmd+k cmd+i",
+        "command": "cursor.openChat",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+a",
+        "command": "cursor.focus",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+k cmd+e",
+        "command": "cursor.explain",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "tab",
+        "command": "acceptSelectedSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
+    }
+] 

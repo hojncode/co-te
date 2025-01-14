@@ -1,8 +1,13 @@
+// const N = 5;
+
 function solution(N) {
   const results = []; // ➊ 조합 결과를 담을 리스트
 
   function backtrack(sum, selectedNums, start) {
-    if (sum === 10) { // ❷ 합이 10이 되면 결과 리스트에 추가
+    console.log("🚧  sum, selectedNums, start\n", sum, selectedNums, start);
+    if (sum === 10) { // ❷ 합이 10이 되면 결과 리스트에 
+      console.log("🚧  여기서 푸시\n", selectedNums);
+      
       results.push(selectedNums);
       return;
     }
