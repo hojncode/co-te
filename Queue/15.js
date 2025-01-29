@@ -34,8 +34,8 @@ class Queue {
 
 /**
  * 
- * @param {number} N 
- * @param {number} k 
+ * @param {number} N
+ * @param {number} k
  */
 function solution(N, k) {
   /*
