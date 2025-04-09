@@ -1,11 +1,17 @@
 const fs = require('fs');
-let input = fs.readFileSync('/Users/hayo/Desktop/dev/hojn_dev/co-te/백준/input.txt').toString().split(' '); 
+const path = require('path');
 
-const n = input[0];
+const filePath = path.join(__dirname, 'input.txt'); // 절대 경로 설정
+let input = fs.readFileSync(filePath, 'utf8').trim().split('\n');
 
-function solution(n) {
-  let result = n.length;
+// 첫 줄 처리
+let [N, X] = input[0].split(' ').map(Number);
 
-  return result;
-}
-solution(n);
+// 두 번째 줄: 배열 처리
+let numbers = input[1].split(' ').map(Number);
+
+// X보다 작은 숫자만 필터링
+let result = numbers.filter(num => num < X);
+
+// 결과 출력
+console.log(result.join(' '));
